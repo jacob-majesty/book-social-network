@@ -14,6 +14,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.majesty.book.book.Book;
+import com.majesty.book.history.BookTransactionHistory;
 import com.majesty.book.role.Role;
 
 import jakarta.persistence.Column;
