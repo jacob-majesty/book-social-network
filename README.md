@@ -1,7 +1,3 @@
-
-
----
-
 # Book Social Network (BSN)  
 
 **Book Social Network (BSN)** is a platform designed to bring together book enthusiasts for sharing and exchanging books. With BSN, users can manage their book collections and engage with a vibrant community of like-minded individuals.  
@@ -29,8 +25,11 @@ The backend is powered by **Spring Boot 3** and **Spring Security 6**, while the
   - Borrow books from other members of the network.  
 - **Book Returning**:  
   - Return borrowed books easily.  
-  - Include an approval process for returns.  
+  - Include an approval process for returns.
 
+ ![spring-security](https://github.com/user-attachments/assets/f2794833-0171-4511-8c56-92808f7f2bbf)
+
+    
 ### Backend Features (book-network)  
 - **Technologies & Tools**:  
   - Spring Boot 3 for backend development.  
@@ -41,7 +40,10 @@ The backend is powered by **Spring Boot 3** and **Spring Security 6**, while the
   - OpenAPI and Swagger UI for API documentation.  
   - Docker for containerized deployment.  
   - GitHub Actions for CI/CD pipeline automation.  
-  - Keycloak for advanced authentication and role management.  
+  - Keycloak for advanced authentication and role management.
+ 
+    ![backend-pipeline](https://github.com/user-attachments/assets/69985d9d-5ac6-4fbc-836e-cec5cf5e16d6)
+
 
 ### Frontend Features (book-network-ui)  
 - **Technologies & Tools**:  
@@ -49,7 +51,10 @@ The backend is powered by **Spring Boot 3** and **Spring Security 6**, while the
   - Lazy loading for optimized performance.  
   - Authentication Guard for protecting routes.  
   - OpenAPI Generator for Angular to ensure API type-safety.  
-  - Bootstrap for responsive and modern styling.  
+  - Bootstrap for responsive and modern styling.
+ 
+    ![frontend-pipeline](https://github.com/user-attachments/assets/bb045f02-2ee4-42c5-9e6d-7bf3dc2c9be0)
+
 
 ## Getting Started  
 
