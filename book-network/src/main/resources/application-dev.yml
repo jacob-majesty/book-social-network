@@ -40,3 +40,4 @@ application:
 server:
   port: 8088
 # 1h58 for secret key
+# 2h47 for mailing info
