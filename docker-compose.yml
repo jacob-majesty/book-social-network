@@ -11,7 +11,7 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     ports:
-      - 3307:3307
+      - 3308:3307
     networks:
       - spring-demo
     restart: unless-stopped
