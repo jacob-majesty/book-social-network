@@ -1,6 +1,7 @@
 package com.majesty.book.history;
 
 import com.majesty.book.book.Book;
+import com.majesty.book.common.BaseEntity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

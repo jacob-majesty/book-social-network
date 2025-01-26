@@ -2,6 +2,8 @@ package com.majesty.book.book;
 
 import java.util.List;
 
+import com.majesty.book.common.BaseEntity;
+import com.majesty.book.feedback.Feedback;
 import com.majesty.book.history.BookTransactionHistory;
 import com.majesty.book.user.User;
 
