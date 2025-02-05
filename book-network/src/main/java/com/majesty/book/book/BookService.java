@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.majesty.book.common.PageResponse;
 import com.majesty.book.exception.OperationNotPermittedException;
+import com.majesty.book.file.FileStorageService;
 import com.majesty.book.history.BookTransactionHistory;
 import com.majesty.book.history.BookTransactionHistoryRepository;
 import com.majesty.book.user.User;
@@ -180,7 +181,7 @@ public class BookService {
     public void uploadBookCoverPicture(MultipartFile file, Authentication connectedUser, Integer bookId) {
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new EntityNotFoundException("No book found with ID:: " + bookId));
-        // User user = ((User) connectedUser.getPrincipal());
+        User user = ((User) connectedUser.getPrincipal());
         var profilePicture = fileStorageService.saveFile(file, connectedUser.getName());
         book.setBookCover(profilePicture);
         bookRepository.save(book);
@@ -205,7 +206,7 @@ public class BookService {
     }
 
     public PageResponse<BorrowedBookResponse> findAllReturnedBooks(int page, int size, Authentication connectedUser) {
-        // User user = ((User) connectedUser.getPrincipal());
+        User user = ((User) connectedUser.getPrincipal());
         Pageable pageable = PageRequest.of(page, size, Sort.by("createdDate").descending());
         Page<BookTransactionHistory> allBorrowedBooks = transactionHistoryRepository.findAllReturnedBooks(pageable,
                 connectedUser.getName());
