@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-BookNetworkApplication<book-network>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.majesty.book.BookNetworkApplication",
+      "projectName": "book-network",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

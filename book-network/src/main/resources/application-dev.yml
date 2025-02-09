@@ -7,12 +7,16 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: false
+    show-sql: true
     properties:
       hibernate:
         format_sql: true
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
+  logging:
+    level:
+      org.hibernate.SQL: DEBUG
+      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
   mail:
     host: localhost
     port: 1025
@@ -22,21 +26,27 @@ spring:
       mail:
         smtp:
           trust: "*"
-        auth: true
-        starttls:
-          enabled: true
-        connectiontimeout: 5000
-        timeout: 3000
-        writetimeout: 5000
+          auth: true
+          starttls:
+            enabled: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
   security:
     oauth2:
       resourceserver:
         jwt:
           issuer-uri: "http://localhost:9090/realms/book-social-network"
+
 application:
+  security:
+    jwt:
+      secret-key: 2e94332b39fb37c48ca68e1325e7615d3bcf3f1cb481c45d2b20aa56013b5b32
+      expiration: 8640000
   file:
     uploads:
       photos-output-path: ./uploads
+
 server:
   port: 8088
 # 1h58 for secret key
