@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "api-gen": "ng-openapi-gen --input ./src/openapi/openapi.json --output ./src/app/services",
     "serve:ssr:book-network-ui": "node dist/book-network-ui/server/server.mjs"
   },
   "private": true,
